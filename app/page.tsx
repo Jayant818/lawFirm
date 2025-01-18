@@ -1,101 +1,182 @@
-import Image from "next/image";
+"use client"
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, Briefcase, FileText, Gavel, Home, Scale, Shield, Trophy, Users } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-export default function Home() {
+export default function HomePage() {
+  const practiceAreas = [
+    {
+      icon: <Briefcase className="w-12 h-12 text-gold-600" />,
+      title: "Corporate & Commercial",
+      description: "Strategic legal solutions for Fortune 500 companies, investment banks, and multinational corporations.",
+      services: [
+        "International Business Law",
+        "Complex Corporate Transactions",
+        "Private Equity & Venture Capital",
+        "Cross-border M&A"
+      ]
+    },
+    {
+      icon: <Scale className="w-12 h-12 text-gold-600" />,
+      title: "High-Stakes Litigation",
+      description: "Expert representation in complex civil litigation and high-profile criminal defense.",
+      services: [
+        "Commercial Litigation",
+        "White-Collar Defense",
+        "International Arbitration",
+        "Class Action Defense"
+      ]
+    },
+    {
+      icon: <Home className="w-12 h-12 text-gold-600" />,
+      title: "Luxury Real Estate",
+      description: "Specialized counsel for premium real estate transactions and development projects.",
+      services: [
+        "High-Value Property Acquisitions",
+        "Commercial Development",
+        "Real Estate Investment",
+        "Luxury Property Disputes"
+      ]
+    },
+    {
+      icon: <Users className="w-12 h-12 text-gold-600" />,
+      title: "Executive Employment",
+      description: "Discrete representation for C-suite executives and board members.",
+      services: [
+        "Executive Compensation",
+        "Golden Parachutes",
+        "Non-Compete Agreements",
+        "Board Governance"
+      ]
+    },
+    {
+      icon: <Gavel className="w-12 h-12 text-gold-600" />,
+      title: "International Arbitration",
+      description: "Premier representation in high-stakes international disputes and arbitration.",
+      services: [
+        "Investment Treaty Arbitration",
+        "Commercial Disputes",
+        "Multi-jurisdictional Cases",
+        "Enforcement Proceedings"
+      ]
+    },
+    {
+      icon: <FileText className="w-12 h-12 text-gold-600" />,
+      title: "Private Client Services",
+      description: "Bespoke legal solutions for ultra-high-net-worth individuals and families.",
+      services: [
+        "Wealth Preservation",
+        "Estate Planning",
+        "Family Office Services",
+        "Asset Protection"
+      ]
+    }
+  ];
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-slate-50">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero.webp"
+            alt="Prestigious Law Office"
+            fill
+            className="object-cover brightness-50"
+            priority
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Proven Legal Expertise <br />Tailored for Your Success
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl font-bolf">
+            NCR LAW ASSOCIATE - Where exceptional legal acumen meets unparalleled service for discerning clients.
+          </p>
+          <Link 
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-gold-600 hover:bg-gold-700 text-white px-8 py-4 rounded-sm transition-all duration-300 text-lg font-bold"
+          >
+            Arrange a Consultation <ArrowRight size={20} />
+          </Link>
+        </motion.div>
+      </section>
+
+      {/* Expertise Section */}
+      <motion.section 
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="bg-white py-20"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeInUp} className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Our Expertise</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+               With over a decade of experience, we provide comprehensive legal services
+              across multiple practice areas to serve our diverse clientele.
+            </p>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Practice Areas Grid */}
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {practiceAreas.map((area, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-8 rounded-sm border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="mb-4">{area.icon}</div>
+                <h3 className="text-2xl font-semibold mb-4">{area.title}</h3>
+                <p className="text-gray-600 mb-6">{area.description}</p>
+                <ul className="space-y-2">
+                  {area.services.map((service, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <ArrowRight size={16} className="text-gold-600" />
+                      <span className="text-gray-700">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+    
+
+      {/* Disclaimer Section */}
+      {/* <section className="py-8 bg-slate-100 text-sm text-gray-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="mb-2">
+            © {new Date().getFullYear()} NCR LAW ASSOCIATE. All rights reserved.
+          </p>
+          <p className="max-w-4xl mx-auto">
+            DISCLAIMER: The information provided on this website does not, and is not intended to, constitute legal advice; instead, all information, content, and materials available on this site are for general informational purposes only. Information on this website may not constitute the most up-to-date legal or other information. Readers should contact their attorney to obtain advice with respect to any particular legal matter.
+          </p>
+        </div>
+      </section> */}
+    </main>
   );
 }

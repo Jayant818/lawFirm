@@ -1,6 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
-import { CheckCircle, Users, Globe, Award } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export default function AboutPage() {
   return (

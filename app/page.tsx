@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Briefcase, FileText, Gavel, Home, Scale, Shield, Trophy, Users } from 'lucide-react';
+import { ArrowRight, Briefcase, FileText, Gavel, Home, Scale,  Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function HomePage() {

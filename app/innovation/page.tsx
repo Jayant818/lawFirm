@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Cpu, Bot, Shield, Brain, Sparkles, ArrowRight } from 'lucide-react';
+import {  Bot, Shield, Brain, Sparkles, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function InnovationPage() {

@@ -1,32 +1,18 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'Contact Us', href: '/contact' },
-    // { label: 'Expertise', href: '/expertise' },
     { label: 'Our Team', href: '/team' },
     { label: 'AI Innovation', href: '/innovation' },
     { label: 'About Us', href: '/about' },
   ];
-     //  ${
-      // scrolled ? 'bg-white shadow-lg' : 'bg-transparent '
-      // }
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300  bg-white shadow-lg
      

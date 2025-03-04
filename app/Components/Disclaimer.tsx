@@ -1,23 +1,30 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Disclaimer = () => {
-  const [isVisible, setIsVisible] = useState(true);
+    const [isAccepted, setIsAccepted] = useState(false);
+
+  useEffect(() => {
+    // Prevent scrolling & interaction until accepted
+    if (!isAccepted) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isAccepted]);
 
   const handleAccept = () => {
-    setIsVisible(false);
+    setIsAccepted(true);
   };
 
   const handleDecline = () => {
-      console.log("User declined the disclaimer.");
-    setIsVisible(false);
-      
+    window.location.href = "https://www.google.com"; // Redirect to Google
   };
 
-  if (!isVisible) return null; 
+  if (isAccepted) return null; // Hide disclaimer once accept
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-3xl bg-black p-6 rounded-lg shadow-lg transition-all duration-500">
+    <div className="fixed bottom-0 w-full  bg-black p-6 rounded-lg shadow-lg transition-all duration-500">
       <h1 className="text-2xl text-white font-semibold">Disclaimer</h1>
       
       <div className="h-[118px] my-3 overflow-y-scroll text-gray-300 text-sm leading-relaxed scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">

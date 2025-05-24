@@ -23,9 +23,8 @@ export const team = [
     imgUrl: "/tarunYadav.jpeg",
     startDate: "2011",
     description: [
-      "Practicing since 2011, Advocate he is a seasoned legal professional known for his unwavering dedication to justice and precision in legal strategy. Based at the High Court of Punjab and Haryana, he has earned a reputation for delivering results across a broad spectrum of legal domains, including matrimonial disputes, criminal trials and appeals, civil suits, labour matters, and arbitration proceedings.",
+      "Practicing advocate since 2011, he is a seasoned legal professional known for his unwavering dedication to justice and precision in legal strategy. He has earned a reputation for delivering results across a broad spectrum of legal domains, including criminal ,civil ,service matters, financial matters, writs,matrimonial disputes, appeals, labour matters, and arbitration proceedings, & repersented clients in all consumer forums - district , state & national.",
       "With over a decade of courtroom experience, he approaches each case with a judicious blend of legal insight and procedural command. His sharp legal instincts and clarity of argumentation have consistently earned him the trust of clients and respect among peers. Whether navigating the intricacies of a family dispute or contesting a complex civil or criminal matter, his focus remains firmly on time-bound, result-oriented advocacy.",
-      "Known for his integrity, professionalism, and client-centric approach, he stands as a dependable pillar in the High Court litigation landscape.",
     ],
   },
 
@@ -44,7 +43,7 @@ export const team = [
   },
   {
     name: "Lokesh Yadav",
-    post: "Associates",
+    post: "Associate",
     phone: "9991636649",
     email: "advlokeshrao@gmail.com",
     imgUrl: "/LokeshYadav.jpeg",
@@ -57,7 +56,7 @@ export const team = [
   },
   {
     name: "Ashutosh Anand",
-    post: "Associates",
+    post: "Associate",
     phone: "9899099458",
     email: "adv.ashutosh09@gmail.com",
     imgUrl: "/ashutoshAnand.png",
@@ -70,7 +69,7 @@ export const team = [
   },
   {
     name: "Yudhisthir Yadav",
-    post: "Associates",
+    post: "Associate",
     phone: "7015804793",
     email: "advyudhisthiryadav@gmail.com",
     imgUrl: "/kuku5.png",

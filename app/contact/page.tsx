@@ -20,19 +20,20 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold mb-6">Our Expertise</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
+            'Criminal Litigation',
+            'Civil Litigation',
             'Corporate & Commercial',
-            'Litigation (Civil and Criminal)',
             'MACT',
-            'Private Client',
             'Drafting',
-            'Property',
+            'Real Estate Matters',
             'Arbitration',
             'Writs',
-            'Customs',
+            'Customs and Excise Matters',
             'Labour Law',
+            'Taxation Law',
             'Service Matters',
             'Company Law',
-            'Securitization Law',
+            'Matrimonial Disputes',
           ].map((area, idx) => (
             <div key={idx} className="flex items-center gap-4 p-4 border rounded-lg shadow-sm">
               <CheckCircle className="text-green-600 w-6 h-6" />
@@ -85,7 +86,7 @@ export default function AboutPage() {
         <div className="flex flex-col md:flex-row items-start gap-6">
           <div>
             <h3 className="text-lg font-semibold">Phone</h3>
-            <p className="text-gray-600">9910731889</p>
+            <p className="text-gray-600">+91-9910731889</p>
           </div>
               <div>
             <h3 className="text-lg font-semibold">Email</h3>

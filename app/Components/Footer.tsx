@@ -26,11 +26,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/expertise" className="hover:text-blue-400 transition-colors duration-300">
-                  Our Expertise
-                </Link>
-              </li>
+            
               <li>
                 <Link href="/team" className="hover:text-blue-400 transition-colors duration-300">
                   Our Associates

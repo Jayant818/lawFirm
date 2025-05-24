@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Briefcase, FileText, Gavel, Home, Scale,  Users } from 'lucide-react';
+import { ArrowRight, Briefcase, FileText, Gavel, Home, Scale,  } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function HomePage() {
@@ -10,7 +10,7 @@ export default function HomePage() {
     {
       icon: <Briefcase className="w-12 h-12 text-gold-600" />,
       title: "Corporate & Commercial",
-      description: "Strategic legal solutions for Fortune 500 companies, investment banks, and multinational corporations.",
+      description: "Strategic legal solutions for companies, investment banks, and multinational corporations.",
       services: [
         "International Business Law",
         "Complex Corporate Transactions",
@@ -20,37 +20,37 @@ export default function HomePage() {
     },
     {
       icon: <Scale className="w-12 h-12 text-gold-600" />,
-      title: "High-Stakes Litigation",
-      description: "Expert representation in complex civil litigation and high-profile criminal defense.",
+      title: "Criminal & Civil Litigation",
+      description: "Expert representation in civil litigation and criminal defense.",
       services: [
+        "Criminal Defense",
         "Commercial Litigation",
         "White-Collar Defense",
         "International Arbitration",
-        "Class Action Defense"
       ]
     },
     {
       icon: <Home className="w-12 h-12 text-gold-600" />,
-      title: "Luxury Real Estate",
+      title: "Real Estate Matters",
       description: "Specialized counsel for premium real estate transactions and development projects.",
       services: [
         "High-Value Property Acquisitions",
         "Commercial Development",
         "Real Estate Investment",
-        "Luxury Property Disputes"
+        "Property Disputes"
       ]
     },
-    {
-      icon: <Users className="w-12 h-12 text-gold-600" />,
-      title: "Executive Employment",
-      description: "Discrete representation for C-suite executives and board members.",
-      services: [
-        "Executive Compensation",
-        "Golden Parachutes",
-        "Non-Compete Agreements",
-        "Board Governance"
-      ]
-    },
+    // {
+    //   icon: <Users className="w-12 h-12 text-gold-600" />,
+    //   title: "Executive Employment",
+    //   description: "Discrete representation for C-suite executives and board members.",
+    //   services: [
+    //     "Executive Compensation",
+    //     "Golden Parachutes",
+    //     "Non-Compete Agreements",
+    //     "Board Governance"
+    //   ]
+    // },
     {
       icon: <Gavel className="w-12 h-12 text-gold-600" />,
       title: "International Arbitration",
@@ -65,7 +65,7 @@ export default function HomePage() {
     {
       icon: <FileText className="w-12 h-12 text-gold-600" />,
       title: "Private Client Services",
-      description: "Bespoke legal solutions for ultra-high-net-worth individuals and families.",
+      description: "Bespoke legal solutions for individuals and families.",
       services: [
         "Wealth Preservation",
         "Estate Planning",

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { team } from '../constant/team';
+import Link from 'next/link';
 
 export default function TeamPage() {
   return (
@@ -27,34 +28,26 @@ export default function TeamPage() {
                 key={index}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="relative h-64">
-                  <Image
-                    src={member.imgUrl}
-                    alt={member.name}
-                    fill
-                    // className
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-blue-600 mb-4">{member.post}</p>
-                  <div className="space-y-2">
-                    {/* <a 
-                      href={`tel:${member.phone}`}
-                      className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
-                    >
-                      <Phone size={16} />
-                      <span>{member.phone}</span>
-                    </a> */}
-                    {/* <a 
-                      href={`mailto:${member.email}`}
-                      className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
-                    >
-                      <Mail size={16} />
-                      <span>{member.email}</span>
-                    </a> */}
+                <Link href={`/team/${index}`}>
+                  <div className="relative h-64">
+                    <Image
+                      src={member.imgUrl}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                    <p className="text-blue-600 mb-4">{member.post}</p>
+                    <p className="text-gray-600 line-clamp-3">
+                      {member.description[0].substring(0, 120)}...
+                    </p>
+                    <div className="mt-4 text-blue-600 font-medium">
+                      View Full Profile →
+                    </div>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>

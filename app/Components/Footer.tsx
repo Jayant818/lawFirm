@@ -1,9 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Youtube, Instagram, Twitter } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const socialLinks = {
+    youtube: "https://youtube.com/@ncrlawassociate?si=n4NM_UvJzc9YPryR",
+    facebook: "https://www.facebook.com/share/15AbsTPQX7/",
+    instagram: "https://www.instagram.com/ncrlawassociate?igsh=MXExeXljbm45ZjU5cg==",
+    twitter: "https://x.com/ncrlawassociate?t=P6s0zIAdKHL7Y_2CG9RUEw&s=09",
+  };
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -26,7 +33,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/team" className="hover:text-blue-400 transition-colors duration-300">
-                  Our Team
+                  Our Associates
                 </Link>
               </li>
               <li>
@@ -69,7 +76,23 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
+        {/* Social Links */}
+        <div className="mt-8 flex justify-center space-x-6">
+          <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
+            <Facebook size={20} />
+          </a>
+          <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+            <Instagram size={20} />
+          </a>
+          <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+            <Youtube size={20} />
+          </a>
+          <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+            <Twitter size={20} />
+          </a>
+        </div>
+
         <div className="mt-12 pt-8 border-t border-gray-800 text-center">
           <p>© {currentYear} NCR Law Associate. All rights reserved.</p>
         </div>

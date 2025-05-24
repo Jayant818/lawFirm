@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { CheckCircle} from 'lucide-react';
 import { team } from '../constant/team';
+import Link from 'next/link';
 
 export default function AboutPage() {
   return (
@@ -58,27 +59,23 @@ export default function AboutPage() {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-6">Meet Our Team</h2>
+        <h2 className="text-2xl font-bold mb-6">Associate</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {team.map((member, idx) => (
-            <div key={idx} className="border rounded-lg shadow-sm p-4 text-center">
-              <Image
-                src={member.imgUrl}
-                alt={member.name}
-                width={150}
-                height={150}
-                className="rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-gray-600 mb-1">{member.post}</p>
-              {/* <p className="text-gray-500 text-sm">{member.phone}</p> */}
-              {/* <a
-                href={`mailto:${member.email}`}
-                className="text-blue-600 text-sm underline"
-              >
-                {member.email}
-              </a> */}
-            </div>
+            <Link href={`/team/${idx}`} key={idx}>
+              <div className="border rounded-lg shadow-sm p-4 text-center hover:shadow-md transition-shadow">
+                <Image
+                  src={member.imgUrl}
+                  alt={member.name}
+                  width={150}
+                  height={150}
+                  className="rounded-full mx-auto mb-4"
+                />
+                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                <p className="text-gray-600 mb-1">{member.post}</p>
+                <p className="text-blue-600 mt-2">View Profile →</p>
+              </div>
+            </Link>
           ))}
         </div>
       </section>

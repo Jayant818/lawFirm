@@ -10,7 +10,7 @@ const Navbar = () => {
     { label: 'Home', href: '/' },
     { label: 'Recent Updates', href: '/recent-updates' },
     { label: 'Contact Us', href: '/contact' },
-    { label: 'Our Team', href: '/team' },
+    { label: 'Our Associates', href: '/team' },
     { label: 'AI Innovation', href: '/innovation' },
     { label: 'About Us', href: '/about' },
   ];

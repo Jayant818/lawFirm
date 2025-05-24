@@ -5,9 +5,16 @@ import { team } from '../../constant/team';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-export default function TeamMemberProfile({ params }: { params: { id: string } }) {
+export default async function TeamMemberProfile({ 
+  params 
+}: { 
+  params: Promise<{ id: string }> 
+}) {
+  // Await the params Promise to get the id
+  const { id } = await params;
+  
   // Find the team member by ID (using index as ID)
-  const memberId = parseInt(params.id);
+  const memberId = parseInt(id);
   const member = team[memberId];
 
   // If member doesn't exist, show 404

@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { Phone, Mail } from 'lucide-react';
 import { team } from '../constant/team';
 
 export default function TeamPage() {

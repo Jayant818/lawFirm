@@ -58,7 +58,11 @@ export const team = [
     phone: "7015804793",
     email: "advyudhisthiryadav@gmail.com",
     imgUrl: "/kuku5.png",
-      startDate: "2023",
-    
+    startDate: "2023",
+    description: [
+      "An advocate by profession, [Name] is known for his dynamic legal practice, representing clients across India and internationally in criminal, civil, labour, arbitration, and real estate matters. A graduate of the esteemed Campus Law Centre, University of Delhi, he brings a sharp legal mind, strategic thinking, and a commitment to client advocacy.",
+      "He has a keen interest in Intellectual Property Rights (IPR) and legal matters involving complex technical dimensions, where his ability to bridge law and technology adds significant value. Before entering the legal field, he earned a degree in Electrical Engineering, which equips him with analytical rigor and a structured problem-solving approach.",
+      "His multidisciplinary background enables him to approach intricate legal issues with clarity and precision, particularly in cases at the intersection of law, innovation, and technology.",
+    ],
   },
 ];

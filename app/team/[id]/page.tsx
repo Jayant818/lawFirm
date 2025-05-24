@@ -49,7 +49,7 @@ export default async function TeamMemberProfile({
               <p className="text-xl text-blue-600 mb-4">{member.post}</p>
               
               <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-3 text-gray-700">
+                {/* <div className="flex items-center gap-3 text-gray-700">
                   <Phone size={18} />
                   <a href={`tel:${member.phone}`} className="hover:text-blue-600">
                     {member.phone}
@@ -60,7 +60,7 @@ export default async function TeamMemberProfile({
                   <a href={`mailto:${member.email}`} className="hover:text-blue-600">
                     {member.email}
                   </a>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-3 text-gray-700">
                   <Calendar size={18} />
                   <span>Practicing since {member.startDate}</span>

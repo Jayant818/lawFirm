@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Mail, Phone, Calendar } from 'lucide-react';
+import {  Calendar } from 'lucide-react';
 import { team } from '../../constant/team';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';

@@ -17,7 +17,7 @@ export const team = [
   },
   {
     name: "Tarun Yadav",
-    post: "CoFounder",
+    post: "Co-Founder",
     phone: "9779151774",
     email: "tarun154.yadav@yahoo.com",
     imgUrl: "/tarunYadav.jpeg",
@@ -31,7 +31,7 @@ export const team = [
 
   {
     name: "Rahul Yadav",
-    post: "CoFounder",
+    post: "Co-Founder",
     phone: "9910731889",
     email: "rahulyadavadv1987@gmail.com",
     imgUrl: "/rahulYadav.jpg",

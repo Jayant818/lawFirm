@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "Welcome to NCR Law Associates Recent Updates",
+    "body": "We are excited to launch our new blog section where we will share important legal updates, case studies, and insights from our experienced legal team. Stay tuned for regular updates on legal developments that matter to you.\n\nOur blog will cover a wide range of topics including:\n- Corporate and commercial law updates\n- Recent court judgments and their implications\n- Changes in regulatory frameworks\n- Legal insights for businesses\n- Case studies from our practice\n\nWe believe in keeping our clients and the legal community informed about the latest developments that could impact their legal strategies and business decisions.",
+    "image": "/hero.webp",
+    "createdAt": "2024-01-15T10:00:00.000Z",
+    "updatedAt": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "title": "Recent Changes in Corporate Law",
+    "body": "The corporate legal landscape has seen significant changes in recent months. Our team has been closely monitoring these developments to ensure our clients remain compliant and take advantage of new opportunities.\n\nKey areas of change include:\n\n1. **Regulatory Compliance**: New compliance requirements have been introduced for companies operating in multiple jurisdictions.\n\n2. **Digital Transformation**: Legal frameworks are adapting to accommodate digital business models and cryptocurrency transactions.\n\n3. **Environmental Regulations**: Increased focus on ESG (Environmental, Social, and Governance) compliance for corporations.\n\n4. **Data Protection**: Enhanced data privacy laws affecting how businesses handle customer information.\n\nOur corporate law team is well-equipped to guide clients through these changes and ensure full compliance while maximizing business opportunities.",
+    "image": "/ai.webp",
+    "createdAt": "2024-01-10T14:30:00.000Z",
+    "updatedAt": "2024-01-10T14:30:00.000Z"
+  }
+]

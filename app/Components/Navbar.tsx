@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
     { label: 'Home', href: '/' },
+    { label: 'Recent Updates', href: '/recent-updates' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Our Team', href: '/team' },
     { label: 'AI Innovation', href: '/innovation' },
@@ -15,8 +16,8 @@ const Navbar = () => {
   ];
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300  bg-white shadow-lg
-     
- 
+
+
     `}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -33,7 +34,7 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
               {navItems.map((item) => (
@@ -47,7 +48,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}

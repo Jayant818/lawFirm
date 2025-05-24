@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { CheckCircle} from 'lucide-react';
+import { team } from '../constant/team';
 
 export default function AboutPage() {
   return (
@@ -59,51 +60,7 @@ export default function AboutPage() {
       <section className="mb-16">
         <h2 className="text-2xl font-bold mb-6">Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-                {
-      name: "Sajjan Singh Yadav",
-      post: "Founder",
-      phone: "9891544141",
-      email: "legalhelp@ncrlawassociate.com",
-      imgUrl: "/sajjanSingh.jpg"
-    },
-    {
-      name: "Tarun Yadav",
-      post: "Team Member",
-      phone: "9779151774",
-      email: "tarun154.yadav@yahoo.com",
-      imgUrl: "/tarunYadav.jpeg"
-    },
-    {
-      name: "Rahul Yadav",
-      post: "Team Member",
-      phone: "9910731889",
-      email: "rahulyadavadv1987@gmail.com",
-      imgUrl: "/rahulYadav.jpg"
-    },
-    {
-      name: "Lokesh Yadav",
-      post: "Team Member",
-      phone: "9991636649",
-      email: "advlokeshrao@gmail.com",
-      imgUrl: "/LokeshYadav.jpeg"
-    },
-    {
-      name: "Ashutosh Anand",
-      post: "Team Member",
-      phone: "9899099458",
-      email: "adv.ashutosh09@gmail.com",
-      imgUrl: "/ashutoshAnand.png"
-    },
-    {
-      name: "Yudhisthir Yadav",
-      post: "Team Member",
-      phone: "7015804793",
-      email: "advyudhisthiryadav@gmail.com",
-      imgUrl: "/kuku5.png"
-    }
-            // Add other team members similarly
-          ].map((member, idx) => (
+          {team.map((member, idx) => (
             <div key={idx} className="border rounded-lg shadow-sm p-4 text-center">
               <Image
                 src={member.imgUrl}
@@ -114,13 +71,13 @@ export default function AboutPage() {
               />
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
               <p className="text-gray-600 mb-1">{member.post}</p>
-              <p className="text-gray-500 text-sm">{member.phone}</p>
-              <a
+              {/* <p className="text-gray-500 text-sm">{member.phone}</p> */}
+              {/* <a
                 href={`mailto:${member.email}`}
                 className="text-blue-600 text-sm underline"
               >
                 {member.email}
-              </a>
+              </a> */}
             </div>
           ))}
         </div>
@@ -132,6 +89,12 @@ export default function AboutPage() {
           <div>
             <h3 className="text-lg font-semibold">Phone</h3>
             <p className="text-gray-600">9910731889</p>
+          </div>
+              <div>
+            <h3 className="text-lg font-semibold">Email</h3>
+            <p className="text-gray-600">legalhelp@ncrlawassociate.com</p>
+            <p className="text-gray-600">ncrlawassociate.in@gmail.com</p>
+
           </div>
           <div>
             <h3 className="text-lg font-semibold">Address</h3>

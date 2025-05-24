@@ -1,53 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { Phone, Mail } from 'lucide-react';
+import { team } from '../constant/team';
 
 export default function TeamPage() {
-  const team = [
-    {
-      name: "Sajjan Singh Yadav",
-      post: "Founder",
-      phone: "9891544141",
-      email: "legalhelp@ncrlawassociate.com",
-      imgUrl: "/sajjanSingh.jpg"
-    },
-    {
-      name: "Tarun Yadav",
-      post: "Team Member",
-      phone: "9779151774",
-      email: "tarun154.yadav@yahoo.com",
-      imgUrl: "/tarunYadav.jpeg"
-    },
-    {
-      name: "Rahul Yadav",
-      post: "Team Member",
-      phone: "9910731889",
-      email: "rahulyadavadv1987@gmail.com",
-      imgUrl: "/rahulYadav.jpg"
-    },
-    {
-      name: "Lokesh Yadav",
-      post: "Team Member",
-      phone: "9991636649",
-      email: "advlokeshrao@gmail.com",
-      imgUrl: "/LokeshYadav.jpeg"
-    },
-    {
-      name: "Ashutosh Anand",
-      post: "Team Member",
-      phone: "9899099458",
-      email: "adv.ashutosh09@gmail.com",
-      imgUrl: "/ashutoshAnand.jpeg"
-    },
-    {
-      name: "Yudhisthir Yadav",
-      post: "Team Member",
-      phone: "7015804793",
-      email: "advyudhisthiryadav@gmail.com",
-      imgUrl: "/kuku5.png"
-    }
-  ];
-
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -84,20 +40,20 @@ export default function TeamPage() {
                   <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                   <p className="text-blue-600 mb-4">{member.post}</p>
                   <div className="space-y-2">
-                    <a 
+                    {/* <a 
                       href={`tel:${member.phone}`}
                       className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
                     >
                       <Phone size={16} />
                       <span>{member.phone}</span>
-                    </a>
-                    <a 
+                    </a> */}
+                    {/* <a 
                       href={`mailto:${member.email}`}
                       className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors duration-300"
                     >
                       <Mail size={16} />
                       <span>{member.email}</span>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
